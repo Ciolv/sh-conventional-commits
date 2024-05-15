@@ -11,7 +11,7 @@ Your computer must have the following technology(s) installed:
 ## Installing the hooks locally
 If you wish to install the hook on your machine, run the following script inside this project folder:
 ```bash
-chmod +x conventional-commit-message
+chmod +x commit-msg
 bash setup.sh
 ```
 To verify if it was installed correctly, execute the command:
