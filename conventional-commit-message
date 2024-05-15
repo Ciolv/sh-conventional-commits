@@ -1,7 +1,10 @@
 #!/bin/sh
 
-# Regex to validate the type pattern
-REGEX="^((Merge[ a-z-]* branch.*)|(Revert*)|((build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?!?: .*))"
+# Conventional commit regex pattern e.g. matching 
+# Merge <source branch> branch into <target branch>
+# or
+# <type><(optional scope)>: <description>
+REGEX="^((Merge[\w -]+ branch into)|(Revert)|((build|chore|ci|docs|feat|fix|perf|ops|refactor|revert|style|test)(\(.*\))?!?:)) (.|\s|\r|\n)+"
 
 FILE=`cat $1` # File containing the commit message
 
